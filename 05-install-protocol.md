@@ -4,12 +4,14 @@ To illustrate the install protocol, first assume that the multisignature wallet 
 
 In this example, the application is Tic-Tac-Toe. You can see with the visual representation below that the funds available in the free balance decrease and the funds committed to the Tic-Tac-Toe application increase by the corresponding amount.
 
-![](./build/install-protocol-state.png)
+![](./build/install-protocol-state.svg)
 
 
 ## Messages
 
-![](./build/install-protocol-exchange.png)
+When the application has been decided between both parties and a connection is established, the protocol for installing the application into the state channel is a single round-trip exchange of `Install` and `InstallAck` messages which include all information pertaining to the chosen deposit amounts of both parties, a pointer to the application being requested to be installed, and metadata such as the timeout and terms being agreed to.
+
+![](./build/install-protocol-exchange.svg)
 
 ### Types
 
@@ -73,7 +75,7 @@ The following parameters are included in the commitment:
 
 The commitment can be visually represented like:
 
-![](./build/install-protocol-commitment.png)
+![](./build/install-protocol-commitment.svg)
 
 
 > NOTE: Although not shown in the visualization, the order of transactions is important. The `multiSend` must encode the call to `proxyCall` **before** the call to `executeAppConditionalTransaction`.

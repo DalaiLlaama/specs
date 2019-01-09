@@ -1,6 +1,6 @@
 # Uninstall Protocol
 
-![](./build/uninstall-protocol-state.png)
+![](./build/uninstall-protocol-state.svg)
 
 The lifecycle of an application completes when it reaches some type of end or "terminal" state, at which point both parties know the finalized distribution of funds in the application-specific state channel.
 
@@ -10,7 +10,7 @@ Using our Tic-Tac-Toe example, imagine Alice made the final winning move, declar
 
 ## Messages
 
-![](./build/uninstall-protocol-exchange.png)
+![](./build/uninstall-protocol-exchange.svg)
 
 ### The **`Uninstall`** Message
 
@@ -47,4 +47,4 @@ There are two key operations required for a successful uninstall.
 
 Specifically, the Conditional Transfer commitment created by the Install Protocol checks that the dependency nonce does not equal 1. _If the nonce is ever 1_, then the conditional transfer will fail. Hence setting the nonce to 1 invalidates the conditional transfer, which is desired behaviour.
 
-![](./build/uninstall-protocol-commitment.png)
+![](./build/uninstall-protocol-commitment.svg)
