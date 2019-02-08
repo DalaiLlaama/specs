@@ -1,6 +1,6 @@
 # Uninstall Virtual App Protocol
 
-This is the Install Virtual App Protocol.
+This is the Uninstall Virtual App Protocol.
 
 ## Messages
 
